@@ -1,0 +1,64 @@
+* {
+    font-family: 'open sans', sans-serif; /* Cambia 'Arial' por la fuente que prefieras */
+    padding: 20px;
+}
+
+.header1 {
+    background-color: #000000;
+    padding: 0.2mm;
+    text-align: left;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    font-size: small;
+  }
+
+
+
+/* Style the header */
+.header2 {
+    background-color: #b7b7b7;
+    padding: 0.2mm;
+    text-align: left;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    font-size: small;
+  }
+
+titulo1{
+    text-align: center;
+    width: 70%;
+    
+}
+
+texto1 {
+    text-align: center;
+    padding: 20px;
+    width: 70%;
+   
+}
+
+img {
+    width: 100%;         /* La imagen ocupa el 100% del ancho del contenedor */
+    height: auto;        /* La altura se ajusta automáticamente para mantener la proporción */
+    display: block;      /* Evita el espacio en blanco debajo de la imagen */
+}
+
+/* Style the footer */
+footer {
+    background-color: #ff935d;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    font-size: medium;
+  }
+
+
+    .mosaico {
+        display: flex;
+        width: 30%;
+        height: auto;
+        border-radius:inherit;
+    }
+    
+ 
+
