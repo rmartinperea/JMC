@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #424141;  /* Gris claro para el texto */
     font-size: 18px;
 }
@@ -17,8 +17,9 @@ body {
 a {
     color: #ff935d;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: small;
+    
+   
+
 }
 
 
@@ -38,40 +39,55 @@ a {
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Agrega sombra sutil para mayor contraste */
     transition: top 0.8s ease; /* Suaviza el movimiento de la barra al ocultarse */
 }
+
+
 .header-contacto p {
     margin: 0;
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: small;
 
 }
 
-
-
+.header-contacto a {
+    color: #ff935d; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita para los enlaces */
+    transition: color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+/* Estilos para la imagen de Instagram */
+.header-contacto img {
+    width: 40px; /* Tamaño pequeño para el logo de Instagram */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin: 0 8px; /* Espacio entre la imagen y el texto */
+    vertical-align: middle; /* Alineación vertical centrada */
+}
 
 
 
 /* Estilo general del header */
 .header-principal {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
-    align-items: center;  /* Centra los elementos verticalmente */
+    align-items:normal;  /* Centra los elementos verticalmente */
     justify-content: flex-start;  /* Alinea el logo y los botones a la izquierda */
     gap: 10px;  /* Espacio entre los elementos */
-    padding: 10px 20px;  /* Espacio alrededor del header */
+    padding: 0px 20px;  /* Espacio alrededor del header */
+    height: 150px;
     position: fixed;  /* Fija el header en la parte superior */
     top: 0;  /* Posición fija en la parte superior */
     left: 0;  /* Alinea el header al borde izquierdo */
     width: 100%;  /* Asegura que el header ocupe todo el ancho de la pantalla */
     z-index: 1000;  /* Asegura que el header esté por encima de otros elementos */
     background-color: #f5f5f5;  /* Color de fondo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra para dar profundidad */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);  /* Sombra para dar profundidad */
     transition: padding 0.8s ease, height 0.8s ease;  /* Transiciones suaves para padding y altura */
 }
 
 .header-principal img{
-    width: 140px;  /* Ancho de la imagen */
-    height: 140px; /* Alto de la imagen */
-    margin-top: 10px;
+    width: 160px;  /* Ancho de la imagen */
+    height: 160px; /* Alto de la imagen */
+    margin-top: 22px;
 
 }
 
@@ -86,18 +102,21 @@ a {
 /* Contenedor de los botones */
 .header-buttons {
     display: flex;  /* Flexbox para los botones */
-    align-items: center;  /* Alinea los botones verticalmente */
+    align-items:end;  /* Alinea los botones verticalmente */
     margin-left: auto;  /* Alinea los botones a la derecha */
+    padding: 5px 15px;  /* Espacio alrededor de los botones */
+    
 }
 
 /* Estilo de los botones del header */
 .header-button {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #424141;  /* Gris claro para el texto */
     background-color: transparent;  /* Fondo transparente */
     color: #000;  /* Color de texto negro */
     border: none;  /* Sin bordes */
     cursor: pointer;
-    padding: 10px 20px;  /* Espacio alrededor de los botones */
+    padding: 5px 15px;  /* Espacio alrededor de los botones */
     font-size: 16px;  /* Un tamaño de fuente estándar */
     margin: 0 10px;  /* Espacio horizontal entre los botones */
     transition: color 0.3s ease;  /* Transición suave para el color del texto */
@@ -294,3 +313,137 @@ a {
     }
 }
 
+/* Estilos generales de la sección de contacto */
+.contacto {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contacto-header {
+    margin-bottom: 30px;
+}
+
+.contacto-header h2 {
+    font-size: 2rem;
+    color: #ff935d;
+    margin-bottom: 10px;
+}
+
+.contacto-header p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Estilo del formulario de contacto */
+.contacto-formulario {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.campo input,
+.campo textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.campo textarea {
+    height: 150px;
+    resize: none;
+}
+
+.campo.enviar {
+    text-align: center;
+}
+
+.btn-enviar {
+    background-color: #ff935d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #e57d3a;
+}
+
+/* Estilos de redes sociales en el pie de la sección */
+.contacto-footer {
+    margin-top: 40px;
+}
+
+.contacto-footer p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+/* Adaptación en pantallas pequeñas */
+@media (max-width: 768px) {
+    .contacto {
+        padding: 30px 15px;
+    }
+
+    .contacto-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-contacto {
+        gap: 15px;
+    }
+
+    .btn-enviar {
+        padding: 10px 20px;
+    }
+
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
+}
