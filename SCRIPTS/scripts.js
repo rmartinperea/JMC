@@ -22,3 +22,27 @@ function toggleHeader() {
         header.style.top = '0';  // El header vuelve a su posición original
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.hero img'); // Seleccionamos todas las imágenes en el Hero
+    let currentIndex = 0; // El índice de la imagen actualmente visible
+    
+    // Función para cambiar de imagen
+    function changeImage() {
+        // Remover la clase 'active' de la imagen actual
+        images[currentIndex].classList.remove('active');
+
+        // Actualizamos el índice para la siguiente imagen
+        currentIndex = (currentIndex + 1) % images.length;
+
+        // Añadimos la clase 'active' a la nueva imagen
+        images[currentIndex].classList.add('active');
+    }
+
+    // Cambiar de imagen cada 5 segundos
+    setInterval(changeImage, 5000); // Cambia cada 5000 milisegundos (5 segundos)
+
+    // Iniciar la primera imagen como activa
+    images[0].classList.add('active');
+});

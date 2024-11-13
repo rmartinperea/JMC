@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #424141;  /* Gris claro para el texto */
+    font-family: 'Playfair Display', serif;     color: #424141;  /* Gris claro para el texto */
     font-size: 18px;
 }
 
@@ -110,8 +109,8 @@ a {
 
 /* Estilo de los botones del header */
 .header-button {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #424141;  /* Gris claro para el texto */
+    font-family: 'Playfair Display', serif; 
+    font-weight: 600;   
     background-color: transparent;  /* Fondo transparente */
     color: #000;  /* Color de texto negro */
     border: none;  /* Sin bordes */
@@ -148,12 +147,11 @@ a {
 
 
 
-
-
-
 .hero {
     position: relative;
     text-align: center;
+    height: 100vh; /* Puedes ajustar la altura del Hero según tus necesidades */
+    overflow: hidden; /* Asegura que las imágenes que salen del contenedor no se vean */
 }
 
 .hero img {
@@ -161,6 +159,32 @@ a {
     height: auto;
     filter: brightness(80%);
     transition: filter 0.5s;
+    object-fit: cover;
+    opacity: 0; /* Inicialmente invisibles */
+    transition: opacity 1s ease-in-out; /* Transición de opacidad */
+    position: absolute; /* Posicionamos todas las imágenes en el mismo lugar */
+    top: 0;
+    left: 0;
+}
+
+/* Hacemos visibles las imágenes activas */
+.hero img.active {
+    opacity: 1; /* La imagen con la clase 'active' será visible */
+}
+
+
+.hero button{
+    font-family: 'Playfair Display', serif;    
+    background-color: transparent;  /* Fondo transparente */
+    color: #000;  /* Color de texto negro */
+    border: none;  /* Sin bordes */
+    cursor: pointer;
+    padding: 5px 15px;  /* Espacio alrededor de los botones */
+    font-size: 16px;  /* Un tamaño de fuente estándar */
+    margin: 0 10px;  /* Espacio horizontal entre los botones */
+    transition: color 0.3s ease;  /* Transición suave para el color del texto */
+    position: relative;  /* Necesario para la línea debajo del botón */
+
 }
 
 .hero h2 {
@@ -179,19 +203,23 @@ a {
 }
 
 .descripcion, .servicios, .informacion, .footer, .galeria {
-    padding: 20px;
-    text-align: center;
+    padding: 70px;
+    text-align: justify;
+    
 }
 
 .servicios h2, .informacion h2, .galeria h2 {
-    font-size: 1.5rem;
-    color: #ff935d;
+    font-size: 1.7rem;
+    color: #000000;
     margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;   font-weight: 400; /* Roboto Light */
+    text-align: center;
 }
 
 .servicios h3 {
 
     color: #ff935d;
+
 }
 
 /*SECCIÓN PRECIO M2*/
@@ -249,7 +277,7 @@ a {
   .presupuesto{
     display: flex; /* Utiliza flexbox para organizar los elementos */
     justify-content:safe; /* Espacio entre la imagen y el texto */
-    align-items: center; /* Alinea verticalmente los elementos */
+    align-items:center; /* Alinea verticalmente los elementos */
     gap: 20px; /* Espacio entre la imagen y el texto */
     justify-content: center; /* Centra todos los elementos (imagen + texto) en el contenedor */
     background-color: #ffbc9a;;
@@ -263,6 +291,8 @@ a {
 .presupuesto-texto {
     flex: 1; /* Expande cada bloque de texto para ocupar el espacio disponible */
     max-width: 300px; /* Ancho máximo del texto */
+    text-align: justify;
+
 }
 
 
