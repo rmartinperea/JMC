@@ -11,14 +11,12 @@ body {
     color: #333;
     line-height: 1.6;
     margin-top: 80px; /* Da espacio para que el contenido no quede tapado por el encabezado */
+    z-index:0;
 }
 
 a {
     color: #ff935d;
     text-decoration: none;
-    
-   
-
 }
 
 
@@ -45,9 +43,7 @@ a {
     color: #ffffff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: small;
-
 }
-
 .header-contacto a {
     color: #ff935d; /* Color de los enlaces */
     text-decoration: none; /* Sin subrayado */
@@ -63,7 +59,6 @@ a {
 }
 
 
-
 /* Estilo general del header */
 .header-principal {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -77,8 +72,8 @@ a {
     top: 0;  /* Posición fija en la parte superior */
     left: 0;  /* Alinea el header al borde izquierdo */
     width: 100%;  /* Asegura que el header ocupe todo el ancho de la pantalla */
-    z-index: 1000;  /* Asegura que el header esté por encima de otros elementos */
-    background-color: #f5f5f5;  /* Color de fondo */
+    z-index: 2;  /* Asegura que el header esté por encima de otros elementos */
+    background-color:#ffffffd3;  /* Color de fondo */
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);  /* Sombra para dar profundidad */
     transition: padding 0.8s ease, height 0.8s ease;  /* Transiciones suaves para padding y altura */
 }
@@ -150,8 +145,9 @@ a {
 .hero {
     position: relative;
     text-align: center;
-    height: 100vh; /* Puedes ajustar la altura del Hero según tus necesidades */
+    height: 110vh; /* Puedes ajustar la altura del Hero según tus necesidades */
     overflow: hidden; /* Asegura que las imágenes que salen del contenedor no se vean */
+    margin-top: -80px;
 }
 
 .hero img {
@@ -172,31 +168,47 @@ a {
     opacity: 1; /* La imagen con la clase 'active' será visible */
 }
 
-
-.hero button{
-    font-family: 'Playfair Display', serif;    
-    background-color: transparent;  /* Fondo transparente */
-    color: #000;  /* Color de texto negro */
-    border: none;  /* Sin bordes */
-    cursor: pointer;
-    padding: 5px 15px;  /* Espacio alrededor de los botones */
-    font-size: 16px;  /* Un tamaño de fuente estándar */
-    margin: 0 10px;  /* Espacio horizontal entre los botones */
-    transition: color 0.3s ease;  /* Transición suave para el color del texto */
-    position: relative;  /* Necesario para la línea debajo del botón */
-
-}
-
 .hero h2 {
     position: absolute;
-    bottom: 20px;
+    bottom: 70px;  /* Ajusta la altura para dejar espacio al botón */
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     padding: 10px 20px;
     border-radius: 5px;
+    text-align: center;
 }
+
+.hero .divider {
+    position: absolute;
+    bottom: 50px;  /* Posiciona la línea entre el título y el botón */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Ancho de la línea */
+    height: 1px;  /* Grosor de la línea */
+    background-color: #ffffff88; /* Color de la línea */
+}
+
+.hero button {
+    position: absolute;
+    bottom: 20px;  /* Coloca el botón más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Playfair Display', serif;    
+    background-color: transparent;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* Efecto al pasar el cursor */
+.hero button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 
 .hero img:hover {
     filter: brightness(100%);
@@ -205,7 +217,6 @@ a {
 .descripcion, .servicios, .informacion, .footer, .galeria {
     padding: 70px;
     text-align: justify;
-    
 }
 
 .servicios h2, .informacion h2, .galeria h2 {
@@ -217,10 +228,9 @@ a {
 }
 
 .servicios h3 {
-
-    color: #ff935d;
-
+    color: #000000;
 }
+
 
 /*SECCIÓN PRECIO M2*/
  /* Contenedor principal que organiza los elementos en fila */
@@ -234,13 +244,56 @@ a {
 /* Ajuste del tamaño de la imagen */
 .servicios-imagen img {
     width: 400px;  /* Ancho de la imagen */
-    height: 400px; /* Alto de la imagen */
+    height: 500px;
+    margin-top: 60px;/* Alto de la imagen */
     object-fit: cover; /* Mantiene la relación de aspecto */
+}
+
+ .divider {
+    width: 50px; /* Puedes ajustar el ancho según tu preferencia */
+    height: 1px; /* Grosor de la línea */
+    background-color: #000000; /* Color negro o ajusta según tu paleta */
+    margin: 10px 0; /* Espacio arriba y abajo de la línea */
 }
 /* Contenedor para cada lado de texto */
 .texto {
     flex: 1; /* Expande cada bloque de texto para ocupar el espacio disponible */
     max-width: 300px; /* Ancho máximo del texto */
+    line-height: 1.8;
+    max-width: 600px; /* Limita el ancho para un diseño más sofisticado */
+    margin: 20px auto; /* Centra el texto y agrega espacio alrededor */
+}
+
+.texto h3 {
+    font-size: 1.2em; /* Tamaño grande para el título */
+    font-weight: 600; /* Hace que el título se vea más impactante */
+    color: #222; /* Un tono oscuro y refinado */
+    margin-bottom: 15px; /* Espacio debajo del título */
+}
+
+
+
+/* Contenedor principal de la sección */
+.informacion {
+    display: flex; /* Habilita el diseño en línea */
+    align-items: center; /* Alinea la imagen y el texto al centro verticalmente */
+    gap: 200px; /* Espacio entre la imagen y el texto */
+    padding: 70px; /* Espacio interno para mejor presentación */
+}
+
+/* Estilo para la imagen */
+.informacion img {
+    height: 0 px;
+    width: 430px;
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente dentro de su contenedor */
+    flex-shrink: 0; /* Evita que la imagen se redimensione en pantallas pequeñas */
+}
+
+/* Estilo para el contenedor de texto */
+.informacion-texto {
+    flex: 1; /* Expande el bloque de texto para ocupar el espacio restante */
+    max-width: 400px; /* Limita el ancho del texto para un diseño más sofisticado */
+    line-height: 1.8; /* Espaciado entre líneas para mejor legibilidad */
 }
 
 
@@ -312,7 +365,7 @@ a {
 }
 
 .footer-logo-img {
-    width: 100px; /* Tamaño del logo, puedes ajustar según el tamaño real del logo */
+    width: 200px; /* Tamaño del logo, puedes ajustar según el tamaño real del logo */
     height: auto;
     margin-bottom: 20px;
 }
